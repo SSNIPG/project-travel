@@ -1,0 +1,138 @@
+.training-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 240px 272px;
+    gap: 104px 165px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+.training-list__item {
+  position: relative;
+  padding-left: 63px;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #0266c1;
+  }
+
+  &::before {
+    position: absolute;
+    left: 29px;
+    top: 0;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 35px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &--mountains {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 45px;
+    padding-right: 10px;
+    flex-basis: 33%;
+    display: flex;
+
+    &::after {
+      display: block;
+      left: 20px;
+      top: auto;
+      transform: none;
+      bottom: -14px;
+    }
+
+    &::before {
+      left: 10px;
+    }
+
+    &--mountains {
+      flex-basis: 440px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.training-list__item--route {
+  &::before {
+    background-image: url("/__spritemap#sprite-map-view");
+  }
+}
+
+.training-list__item--equipment {
+  &::before {
+    background-image: url("/__spritemap#sprite-boots-view");
+  }
+}
+
+.training-list__item--nature {
+  &::before {
+    background-image: url("/__spritemap#sprite-tree-view");
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      left: 0;
+    }
+  }
+}
+
+.training-list__item--mountains {
+  &::before {
+    background-image: url("/__spritemap#sprite-mountain-view");
+  }
+}
+
+.training-list__item .training-list__description {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 0;
+  padding-right: 28px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 0;
+    flex-basis: 199px;
+  }
+}

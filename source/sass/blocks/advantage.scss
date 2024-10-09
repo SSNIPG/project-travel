@@ -1,0 +1,118 @@
+.advantage {
+  padding: 82px 10px 19px;
+  outline: 1px solid rgba(2, 102, 193, 0.1);
+
+  h3 {
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &::before {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 42px;
+    height: 42px;
+    border: 1px solid #0266c1;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+    padding: 103px 20px 30px;
+
+    h3 {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    &::before {
+      top: 30px;
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 124px 20px 40px;
+
+    h3 {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &::before {
+      top: 40px;
+      width: 54px;
+      height: 54px;
+    }
+  }
+}
+
+.advantage--security {
+  &::before {
+    background-image: url("/__spritemap#sprite-security-view");
+  }
+}
+
+.advantage--experience {
+  &::before {
+    background-image: url("/__spritemap#sprite-crown-view");
+  }
+}
+
+.advantage--equipment {
+  &::before {
+    background-image: url("/__spritemap#sprite-boots-advantages-view");
+  }
+}
+
+.advantage--routes {
+  &::before {
+    background-image: url("/__spritemap#sprite-path-view");
+  }
+}
+
+.advantage--nature {
+  h3 {
+    padding: 0 48px;
+  }
+
+  &::before {
+    background-image: url("/__spritemap#sprite-leaf-view");
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 36px;
+
+    h3 {
+      padding: 0 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 62px;
+
+    h3 {
+      padding: 0;
+    }
+  }
+}

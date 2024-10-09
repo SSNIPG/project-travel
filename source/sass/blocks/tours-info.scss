@@ -1,0 +1,28 @@
+.tours-info {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.tours-info__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 32px;
+  margin: 0;
+}
+
+.tours-info__description {
+  display: flex;
+  gap: 1px;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tours-info__title {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+}

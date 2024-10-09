@@ -1,0 +1,153 @@
+.training {
+  padding: 20px 15px;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 120px;
+  }
+}
+
+.training--decor {
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -4px;
+      content: "";
+      width: 633px;
+      height: 280px;
+      background-image: url("/img/training-clouds.png");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.training__title {
+  position: relative;
+  font-size: 22px;
+  font-weight: 800;
+  padding: 16px 0 0;
+  margin: 0;
+  margin-bottom: 35px;
+
+  &::before {
+    position: absolute;
+    content: attr(data-training);
+    left: 0;
+    bottom: 12px;
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 800;
+    opacity: 3%;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+    padding: 20px 0 0;
+
+    &::before {
+      bottom: 0;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 32px;
+    padding: 23px 0 0;
+
+    &::before {
+      bottom: -3px;
+      font-size: 55px;
+      line-height: 55px;
+    }
+  }
+}
+
+.training__wrapper {
+  p {
+    line-height: 20px;
+    margin: 0;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $tablet-width) {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    p {
+      margin-bottom: 56px;
+      padding-right: 380px;
+    }
+  }
+}
+
+.training__process-title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 104px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    line-height: 21px;
+    margin-bottom: 26px;
+  }
+}
+
+.training__process-list {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    left: -84px;
+    top: 108px;
+    content: "";
+    width: 183px;
+    height: 2px;
+    background-color: #0266c1;
+    transform: rotate(90deg);
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      display: block;
+      bottom: -8px;
+      left: 27px;
+      top: auto;
+      transform: rotate(0deg);
+      width: calc(100% - 27px);
+    }
+  }
+}
+
+.training__instructors {
+  position: relative;
+  margin-bottom: 25px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 61px;
+  }
+}
